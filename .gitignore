@@ -1,5 +1,6 @@
 target
 chapter1/file-copy/data/outbox/
 chapter2/cbr/activemq-data/
+chapter2/spring/activemq-data/
 .idea
 *.i??
