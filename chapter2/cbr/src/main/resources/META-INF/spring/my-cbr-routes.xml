@@ -36,13 +36,11 @@
   		<from uri="jms:incomingOrders"/>
   			<choice>
   				<when>
-  					<!-- <simple>${header.CamelFileName} regex '^.*xml$'</simple> -->
   					<simple>${header.CamelFileName} contains '.xml'</simple>
   					<to uri="jms:xmlOrders"/>
   				</when>
-  				<when>
-  					<!-- <simple>${header.CamelFileName} regex '^.*xml$'</simple> -->
-  					<simple>${header.CamelFileName} contains '.csv' || contains '.csl'</simple>
+  				<when>	
+  					<simple>${header.CamelFileName} contains '.csv'</simple>
   					<to uri="jms:csvOrders"/>
   				</when>
   				<otherwise>

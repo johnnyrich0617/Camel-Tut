@@ -31,9 +31,9 @@ public class OrderToCsvBeanTest extends CamelTestSupport {
     public void testOrderToCsvBean() throws Exception {
         // this is the inhouse format we want to transform to CSV
         String inhouse = "0000005555000001144120091209  2319@1108";
-        template.sendBodyAndHeader("direct:start", inhouse, "Date", "20091209");
+        template.sendBodyAndHeader("direct:start", inhouse, "Date", "20091210");
 
-        File file = new File("target/orders/received/report-20091209.csv");
+        File file = new File("target/orders/received/report-20091210.csv");
         assertTrue("File should exist", file.exists());
 
         // compare the expected file content
